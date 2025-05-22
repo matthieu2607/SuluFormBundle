@@ -67,7 +67,7 @@ class FormAdmin extends Admin
 
     public function configureNavigationItems(NavigationItemCollection $navigationItemCollection): void
     {
-        if ($this->securityChecker->hasPermission(static::SECURITY_CONTEXT, PermissionTypes::EDIT)) {
+        if ($this->securityChecker->hasPermission(static::SECURITY_CONTEXT, PermissionTypes::VIEW)) {
             $navigationItem = new NavigationItem('sulu_form.forms');
             $navigationItem->setIcon('su-magic');
             $navigationItem->setPosition(10);
